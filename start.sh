@@ -117,12 +117,14 @@ TLSCertificateFile ${SSL_CERT_FILE}
 TLSCertificateKeyFile ${SSL_KEY_FILE}
 EOF
 
-    if [ "${LDAP_ENFORCE_TLS:-true}"!="false" ]; then
-        cat << EOF >> /etc/ldap/slapd.conf
-# enfore tls on plain socket
-security tls=1
-EOF
-    fi
+# commented out by tgruenert 
+# blocks internal unencrypted traffic
+#     if [ "${LDAP_ENFORCE_TLS:-true}"!="false" ]; then
+#         cat << EOF >> /etc/ldap/slapd.conf
+# # enfore tls on plain socket
+# security tls=1
+# EOF
+#     fi
 
     LISTEN_SCHEMA="${LISTEN_SCHEMA} ldaps:///"
 fi
