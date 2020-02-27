@@ -39,6 +39,8 @@ include /etc/openldap/schema/misc.schema
 include /etc/openldap/schema/cosine.schema
 include /etc/openldap/schema/nis.schema
 include /etc/openldap/schema/inetorgperson.schema
+include /etc/openldap/schema/samba.schema
+
 
 modulepath	/usr/lib/openldap
 moduleload	back_mdb
