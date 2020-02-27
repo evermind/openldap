@@ -1,0 +1,37 @@
+dn: dc=evermind,dc=de
+objectClass: top
+objectClass: domain
+
+dn: cn=ldapadmin,dc=evermind,dc=de
+objectClass: top
+objectClass: inetOrgPerson
+sn: oneldapadmin
+
+dn: ou=groups,dc=evermind,dc=de
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=users,dc=evermind,dc=de
+objectClass: top
+objectClass: organizationalUnit
+
+dn: cn=user1,ou=users,dc=evermind,dc=de
+objectClass: top
+objectClass: inetOrgPerson
+sn: one-of-nine
+
+dn: cn=user2,ou=users,dc=evermind,dc=de
+objectClass: top
+objectClass: inetOrgPerson
+sn: two-of-nine
+
+dn: cn=user3,ou=users,dc=evermind,dc=de
+objectClass: top
+objectClass: inetOrgPerson
+sn: three-of-nine
+
+dn: cn=admins,ou=groups,dc=evermind,dc=de
+objectClass: top
+objectClass: groupOfUniqueNames
+uniqueMember: cn=user1,ou=users,dc=evermind,dc=de
+uniqueMember: cn=user3,ou=users,dc=evermind,dc=de

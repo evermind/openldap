@@ -1,0 +1,21 @@
+---
+
+
+version: '3'
+services:
+  openldap:
+    build: .
+    ports:
+      - 636:636
+      - 389:389 
+    volumes:
+      - ./ssl:/ssl
+      - ./data:/var/lib/ldap/data
+    environment:
+      DEBUG: "-1" # everything
+      BASE_DN: "dc=evermind,dc=de"
+      ROOT_DN_PASSWORD: "secret"
+      SSL_CA_FILE: /ssl/cert.pem
+      SSL_CERT_FILE: /ssl/cert.pem
+      SSL_KEY_FILE: /ssl/key.pem
+
