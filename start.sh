@@ -40,9 +40,9 @@ include /etc/openldap/schema/cosine.schema
 include /etc/openldap/schema/nis.schema
 include /etc/openldap/schema/inetorgperson.schema
 include /etc/openldap/custom-schema/samba.schema
-include /etc/openldap/custom-schema/microsoftattributetype.schema
-include /etc/openldap/custom-schema/microsoftattributetypestd.schema
-include /etc/openldap/custom-schema/microsoftobjectclass.schema
+#include /etc/openldap/custom-schema/microsoftattributetype.schema
+#include /etc/openldap/custom-schema/microsoftattributetypestd.schema
+#include /etc/openldap/custom-schema/microsoftobjectclass.schema
 
 
 modulepath	/usr/lib/openldap
